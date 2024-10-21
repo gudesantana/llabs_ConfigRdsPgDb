@@ -7,11 +7,12 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket         = "s3-aws-araujo-psa-trf-state-prd"
-  #   key            = "IE.TRF.AwsOrderOrchest.AWS/OrderOrchest/terraform.tfstate"
-  #   region         = "us-east-1"
-  #   dynamodb_table = "dyndb-aws-araujo-psa-trf-state-prd"
-  #   encrypt        = true
-  #   profile        = "default"
+  backend "s3" {
+    bucket         = "s3-aws-llabs-trf-state-prd"
+    key            = "llabs-prd-rds-database/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "dyndb-aws-araujo-psa-trf-state-prd"
+    encrypt        = true
+    profile        = "default"
   }
+}
